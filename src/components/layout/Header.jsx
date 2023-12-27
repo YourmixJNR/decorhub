@@ -19,6 +19,36 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between bg-white px-8 py-4">
+      {/* Desktop Starts */}
+      <div className="flex items-center">
+        <div className="md:hidden">
+          <MenuIcon className="cursor-pointer" onClick={() => setOpen(!open)} />
+        </div>{" "}
+        <Logo />
+      </div>
+
+      <div className="space-x-10 hidden md:block">
+        <DesktopNavBar />
+      </div>
+
+      <div className="flex items-center space-x-5">
+        <Link to="#">
+          <SearchTwo className="hidden md:block" />
+        </Link>
+        <Link to="#">
+          <UserCircle className="hidden md:block" />
+        </Link>
+        <Link to="#">
+          <div className="flex items-center space-x-2">
+            <CartIcon />
+            <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+              2
+            </span>
+          </div>
+        </Link>
+      </div>
+      {/* Desktop Ends */}
+
       {/* Mobile Starts */}
       <div
         className={`w-full h-full top-0 left-0 bg-gray-400 absolute transform origin-left transition-transform duration-300 ease-in-out ${
@@ -81,36 +111,6 @@ const Header = () => {
         </div>
       </div>
       {/* Mobile Ends */}
-
-      {/* Desktop Starts */}
-      <div className="flex items-center">
-        <div className="md:hidden">
-          <MenuIcon className="cursor-pointer" onClick={() => setOpen(!open)} />
-        </div>{" "}
-        <Logo />
-      </div>
-
-      <div className="space-x-10 hidden md:block">
-        <DesktopNavBar />
-      </div>
-
-      <div className="flex items-center space-x-5">
-        <Link to="#">
-          <SearchTwo className="hidden md:block" />
-        </Link>
-        <Link to="#">
-          <UserCircle className="hidden md:block" />
-        </Link>
-        <Link to="#">
-          <div className="flex items-center space-x-2">
-            <CartIcon />
-            <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
-              2
-            </span>
-          </div>
-        </Link>
-      </div>
-      {/* Desktop Ends */}
     </header>
   );
 };
