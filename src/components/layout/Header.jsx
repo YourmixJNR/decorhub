@@ -10,20 +10,16 @@ import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg";
 import { ReactComponent as Youtube } from "../../assets/icons/youtube.svg";
 import Logo from "../logo/Logo";
+import SearchBar from "../ui/SearchBar";
+import MobileNavBar from "../navbar/MobileNavBar";
+import DesktopNavBar from "../navbar/DesktopNavBar";
 
 const Header = () => {
-  let links = [
-    { name: "Home", path: "/" },
-    { name: "Product", path: "#" },
-    { name: "Shop", path: "#" },
-    { name: "Contact Us", path: "#" },
-  ];
-
   const [open, setOpen] = useState(false);
 
   return (
     <header className="flex items-center justify-between bg-white px-8 py-4">
-      {/* Mobile Menu Starts */}
+      {/* Mobile Starts */}
       <div
         className={`w-full h-full top-0 left-0 bg-gray-400 absolute transform origin-left transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
@@ -33,29 +29,13 @@ const Header = () => {
           <div>
             <div className="flex justify-between mb-4">
               <Logo />
-              <CloseMenu className="cursor-pointer" onClick={() => setOpen(!open)} />
-            </div>
-
-            <div className="flex relative items-center mb-4">
-              <SearchTwo className="absolute ml-2.5 left-0" />
-              <input
-                type="text"
-                placeholder="Search"
-                className="h-11 w-full rounded-md border border-slate-500 pl-10 focus:outline-none"
+              <CloseMenu
+                className="cursor-pointer"
+                onClick={() => setOpen(!open)}
               />
             </div>
-
-            <div>
-              {links.map(({ name, path }, index) => (
-                <Link
-                  className="text-gray-500 active:text-black block py-4 border-b border-gray-200" // Added some padding for readability
-                  key={index}
-                  to={path}
-                >
-                  {name}
-                </Link>
-              ))}
-            </div>
+            <SearchBar />
+            <MobileNavBar />
           </div>
 
           <div>
@@ -106,32 +86,29 @@ const Header = () => {
       <div className="flex items-center">
         <div className="md:hidden">
           <MenuIcon className="cursor-pointer" onClick={() => setOpen(!open)} />
-          {/* {open ? <MenuIcon /> : <CloseMenu />} */}
         </div>{" "}
         <Logo />
       </div>
 
       <div className="space-x-10 hidden md:block">
-        {links.map(({ name, path }, index) => (
-          <Link
-            className="text-gray-500 active:text-black"
-            key={index}
-            to={path}
-          >
-            {name}
-          </Link>
-        ))}
+        <DesktopNavBar />
       </div>
 
       <div className="flex items-center space-x-5">
-        <SearchTwo className="hidden md:block" />
-        <UserCircle className="hidden md:block" />
-        <div className="flex items-center space-x-2">
-          <CartIcon />
-          <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
-            2
-          </span>
-        </div>
+        <Link to='#'>
+          <SearchTwo className="hidden md:block" />
+        </Link>
+        <Link to="#">
+          <UserCircle className="hidden md:block" />
+        </Link>
+        <Link to="#">
+          <div className="flex items-center space-x-2">
+            <CartIcon />
+            <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+              2
+            </span>
+          </div>
+        </Link>
       </div>
       {/* Desktop Menu Ends */}
     </header>
