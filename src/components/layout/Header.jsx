@@ -80,9 +80,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* Mobile Menu Ends */}
+      {/* Mobile Ends */}
 
-      {/* Desktop Menu Starts */}
+      {/* Desktop Starts */}
       <div className="flex items-center">
         <div className="md:hidden">
           <MenuIcon className="cursor-pointer" onClick={() => setOpen(!open)} />
@@ -95,7 +95,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center space-x-5">
-        <Link to='#'>
+        <Link to="#">
           <SearchTwo className="hidden md:block" />
         </Link>
         <Link to="#">
@@ -110,7 +110,7 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      {/* Desktop Menu Ends */}
+      {/* Desktop Ends */}
     </header>
   );
 };
