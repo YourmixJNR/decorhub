@@ -24,12 +24,16 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between bg-white px-8 py-4">
       {/* Mobile Menu Starts */}
-      <div className="w-full h-full top-0 left-0 bg-gray-400 absolute md:hidden">
+      <div
+        className={`w-full h-full top-0 left-0 bg-gray-400 absolute transform origin-left transition-transform duration-300 ease-in-out ${
+          open ? "translate-x-0" : "-translate-x-full"
+        } md:hidden`}
+      >
         <div className="w-11/12 h-full bg-white px-6 py-6 flex flex-col justify-between">
           <div>
             <div className="flex justify-between mb-4">
               <Logo />
-              <CloseMenu />
+              <CloseMenu className="cursor-pointer" onClick={() => setOpen(!open)} />
             </div>
 
             <div className="flex relative items-center mb-4">
@@ -100,8 +104,9 @@ const Header = () => {
 
       {/* Desktop Menu Starts */}
       <div className="flex items-center">
-        <div className="md:hidden" onClick={() => setOpen(!open)}>
-          {open ? <MenuIcon /> : <CloseMenu />}
+        <div className="md:hidden">
+          <MenuIcon className="cursor-pointer" onClick={() => setOpen(!open)} />
+          {/* {open ? <MenuIcon /> : <CloseMenu />} */}
         </div>{" "}
         <Logo />
       </div>
