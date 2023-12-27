@@ -5,6 +5,10 @@ import { ReactComponent as CloseMenu } from "../../assets/icons/Line.svg";
 import { ReactComponent as CartIcon } from "../../assets/icons/shopping-bag.svg";
 import { ReactComponent as SearchTwo } from "../../assets/icons/search-02.svg";
 import { ReactComponent as UserCircle } from "../../assets/icons/user-circle.svg";
+import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
+import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
+import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg";
+import { ReactComponent as Youtube } from "../../assets/icons/youtube.svg";
 import Logo from "../logo/Logo";
 
 const Header = () => {
@@ -21,14 +25,14 @@ const Header = () => {
     <header className="flex items-center justify-between bg-white px-8 py-4">
       {/* Left Section */}
       <div className="flex items-center">
-        <div className="md:hidden" onClick={()=>setOpen(!open)}>
+        <div className="md:hidden" onClick={() => setOpen(!open)}>
           {open ? <MenuIcon /> : <CloseMenu />}
         </div>{" "}
         <Logo />
       </div>
 
       {/* Menu Section */}
-      <div className="hidden md:flex space-x-10">
+      <div className="space-x-10 hidden md:block">
         {links.map(({ name, path }, index) => (
           <Link
             className="text-gray-500 active:text-black"
@@ -46,9 +50,81 @@ const Header = () => {
         <UserCircle className="hidden md:block" />
         <div className="flex items-center space-x-2">
           <CartIcon />
-          <span className="text-base bg-black text-white px-1.5 py-0.2 rounded-full">
+          <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
             2
           </span>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="w-full h-full top-0 left-0 bg-gray-400 absolute md:hidden">
+        <div className="w-11/12 h-full bg-white px-6 py-6 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-between mb-4">
+              <Logo />
+              <CloseMenu />
+            </div>
+            <div className="flex relative items-center mb-4">
+              <SearchTwo className="absolute ml-2.5 left-0" />
+              <input
+                type="text"
+                placeholder="Search"
+                className="h-11 w-full rounded-md border border-slate-500 pl-10 focus:outline-none"
+              />
+            </div>
+            <div>
+              {links.map(({ name, path }, index) => (
+                <Link
+                  className="text-gray-500 active:text-black block py-4 border-b border-gray-200" // Added some padding for readability
+                  key={index}
+                  to={path}
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between border-b border-gray-200 pb-2 mb-4 ">
+              <span className="text-gray-500">Cart</span>
+              <div className="flex items-center space-x-2">
+                <CartIcon />
+                <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+                  2
+                </span>
+              </div>
+            </div>
+
+            <div className="flex justify-between border-b pb-2 mb-4 border-gray-200">
+              <span className="text-gray-500">Wishlist</span>
+              <div className="flex items-center space-x-2">
+                <WishList />
+                <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+                  2
+                </span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="bg-black w-full flex justify-center text-white rounded-md p-2 mb-5"
+            >
+              Sign In
+            </button>
+
+            <div className="flex space-x-6">
+              <Link to="#">
+                <Instagram />
+              </Link>
+              <Link to="#">
+                <Facebook />
+              </Link>
+              <Link to="#">
+                <Youtube />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>
