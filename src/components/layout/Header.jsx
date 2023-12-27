@@ -23,40 +23,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between bg-white px-8 py-4">
-      {/* Left Section */}
-      <div className="flex items-center">
-        <div className="md:hidden" onClick={() => setOpen(!open)}>
-          {open ? <MenuIcon /> : <CloseMenu />}
-        </div>{" "}
-        <Logo />
-      </div>
-
-      {/* Menu Section */}
-      <div className="space-x-10 hidden md:block">
-        {links.map(({ name, path }, index) => (
-          <Link
-            className="text-gray-500 active:text-black"
-            key={index}
-            to={path}
-          >
-            {name}
-          </Link>
-        ))}
-      </div>
-
-      {/* Right Section */}
-      <div className="flex items-center space-x-5">
-        <SearchTwo className="hidden md:block" />
-        <UserCircle className="hidden md:block" />
-        <div className="flex items-center space-x-2">
-          <CartIcon />
-          <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
-            2
-          </span>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
+      {/* Mobile Menu Starts */}
       <div className="w-full h-full top-0 left-0 bg-gray-400 absolute md:hidden">
         <div className="w-11/12 h-full bg-white px-6 py-6 flex flex-col justify-between">
           <div>
@@ -64,6 +31,7 @@ const Header = () => {
               <Logo />
               <CloseMenu />
             </div>
+
             <div className="flex relative items-center mb-4">
               <SearchTwo className="absolute ml-2.5 left-0" />
               <input
@@ -72,6 +40,7 @@ const Header = () => {
                 className="h-11 w-full rounded-md border border-slate-500 pl-10 focus:outline-none"
               />
             </div>
+
             <div>
               {links.map(({ name, path }, index) => (
                 <Link
@@ -127,6 +96,39 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* Mobile Menu Ends */}
+
+      {/* Desktop Menu Starts */}
+      <div className="flex items-center">
+        <div className="md:hidden" onClick={() => setOpen(!open)}>
+          {open ? <MenuIcon /> : <CloseMenu />}
+        </div>{" "}
+        <Logo />
+      </div>
+
+      <div className="space-x-10 hidden md:block">
+        {links.map(({ name, path }, index) => (
+          <Link
+            className="text-gray-500 active:text-black"
+            key={index}
+            to={path}
+          >
+            {name}
+          </Link>
+        ))}
+      </div>
+
+      <div className="flex items-center space-x-5">
+        <SearchTwo className="hidden md:block" />
+        <UserCircle className="hidden md:block" />
+        <div className="flex items-center space-x-2">
+          <CartIcon />
+          <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+            2
+          </span>
+        </div>
+      </div>
+      {/* Desktop Menu Ends */}
     </header>
   );
 };
