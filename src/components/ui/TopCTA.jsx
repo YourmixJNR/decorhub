@@ -20,7 +20,7 @@ const TopCTA = () => {
            <span>Shop Now</span> <RightIcon />
         </Link>
       </div>
-      <CloseIcon className="cursor-pointer" onClick={() => setClose(true)} />
+      <CloseIcon className="cursor-pointer float-end" onClick={() => setClose(true)} />
     </div>
   );
 };
