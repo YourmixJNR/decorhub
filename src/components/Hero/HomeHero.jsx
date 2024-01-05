@@ -25,7 +25,7 @@ const HomeHero = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, [currentImageIndex, images.length]);
@@ -40,13 +40,13 @@ const HomeHero = () => {
       <div className="hidden px-8 md:flex">
         <span
           onClick={handlePrevClick}
-          className="bg-white w-12 h-12 p-3 flex justify-center items-center rounded-full absolute left-8 top-1/2"
+          className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full absolute left-8 top-1/2"
         >
           <LeftArrow />
         </span>
         <span
           onClick={handleNextClick}
-          className="bg-white w-12 h-12 p-3 flex justify-center items-center rounded-full absolute right-8 top-1/2"
+          className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full absolute right-8 top-1/2"
         >
           <RightArrow />
         </span>
