@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../logo/Logo";
 import { ReactComponent as MenuIcon } from "../../assets/icons/menu-line-horizontal.svg";
 import { ReactComponent as CloseMenu } from "../../assets/icons/Line.svg";
 import { ReactComponent as CartIcon } from "../../assets/icons/shopping-bag.svg";
 import { ReactComponent as SearchTwo } from "../../assets/icons/search-02.svg";
 import { ReactComponent as UserCircle } from "../../assets/icons/user-circle.svg";
 import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
-import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
-import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg";
-import { ReactComponent as Youtube } from "../../assets/icons/youtube.svg";
-import Logo from "../logo/Logo";
+import NavSocialIcons from "../ui/NavSocialIcons";
 import SearchBar from "../ui/SearchBar";
 import MobileNavBar from "../navbar/MobileNavBar";
 import DesktopNavBar from "../navbar/DesktopNavBar";
@@ -104,15 +102,7 @@ const Header = () => {
               </button>
 
               <div className="flex space-x-6">
-                <Link to="#">
-                  <Instagram />
-                </Link>
-                <Link to="#">
-                  <Facebook />
-                </Link>
-                <Link to="#">
-                  <Youtube />
-                </Link>
+                <NavSocialIcons />
               </div>
             </div>
           </div>
