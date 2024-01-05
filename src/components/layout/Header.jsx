@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <>
       <TopCTA />
-      <header className="flex items-center justify-between bg-white px-8 py-4 lg:px-40">
+      <header className="flex items-center justify-between bg-white mx-8 py-4 lg:mx-40 z-100">
         {/* Desktop Starts */}
         <div className="flex items-center">
           <div className="md:hidden">
@@ -29,7 +29,7 @@ const Header = () => {
               className="cursor-pointer"
               onClick={() => setOpen(!open)}
             />
-          </div>{" "}
+          </div>
           <Logo />
         </div>
 
@@ -60,6 +60,7 @@ const Header = () => {
           className={`w-full h-full top-0 left-0 bg-gray-400 absolute transform origin-left transition-transform duration-300 ease-in-out ${
             open ? "translate-x-0" : "-translate-x-full"
           } md:hidden`}
+          style={{ zIndex: 1000 }}
         >
           <div className="w-11/12 h-full bg-white px-6 py-6 flex flex-col justify-between">
             <div>
