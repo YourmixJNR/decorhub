@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/layout/Header";
 import ImagePlaceholder1 from "../assets/images/ImagePlaceholder.jpg";
 import ImagePlaceholder2 from "../assets/images/Pasteimage.png";
@@ -19,6 +19,15 @@ const Home = () => {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change slide every 5000 milliseconds (5 seconds)
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, [currentImageIndex, images.length]);
 
   return (
     <div>
