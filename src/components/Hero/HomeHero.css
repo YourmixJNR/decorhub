@@ -1,13 +1,13 @@
 .vanilla-indicators {
     width: 0.5rem;
     height: 0.5rem;
-	border-radius: 10px;
+    border-radius: 10px;
     background-color: #ffffff;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .vanilla-indicators.vanilla-active {
     width: 1.875rem;
     height: 0.5rem;
-	background-color: #ffffff;
+    background-color: #ffffff;
 }

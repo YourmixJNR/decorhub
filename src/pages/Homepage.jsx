@@ -1,6 +1,6 @@
-import React from 'react'
-import Header from '../components/layout/Header'
-import HomeHero from '../components/Hero/HomeHero'
+import React from "react";
+import Header from "../components/layout/Header";
+import HomeHero from "../components/Hero/HomeHero";
 
 const Homepage = () => {
   return (
@@ -8,7 +8,7 @@ const Homepage = () => {
       <Header />
       <HomeHero />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

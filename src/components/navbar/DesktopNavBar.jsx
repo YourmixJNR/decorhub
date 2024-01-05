@@ -12,11 +12,7 @@ const DesktopNavBar = () => {
   return (
     <>
       {links.map(({ name, path }, index) => (
-        <Link
-            key={index}
-            to={path}
-            className="text-gray-500 active:text-black"
-        >
+        <Link key={index} to={path} className="text-gray-500 active:text-black">
           {name}
         </Link>
       ))}
