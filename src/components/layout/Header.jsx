@@ -43,7 +43,7 @@ const Header = () => {
             <UserCircle className="hidden md:block" />
           </Link>
           <Link to="#">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1">
               <CartIcon />
               <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                 2
@@ -76,7 +76,7 @@ const Header = () => {
             <div>
               <div className="flex justify-between border-b border-gray-200 pb-2 mb-4 ">
                 <span className="text-gray-500">Cart</span>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
                   <CartIcon />
                   <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                     2
@@ -86,7 +86,7 @@ const Header = () => {
 
               <div className="flex justify-between border-b pb-2 mb-4 border-gray-200">
                 <span className="text-gray-500">Wishlist</span>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-1">
                   <WishList />
                   <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                     2
