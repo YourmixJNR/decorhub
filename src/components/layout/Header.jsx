@@ -45,7 +45,7 @@ const Header = () => {
           <Link to="#">
             <div className="flex items-center space-x-2">
               <CartIcon />
-              <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+              <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                 2
               </span>
             </div>
@@ -78,7 +78,7 @@ const Header = () => {
                 <span className="text-gray-500">Cart</span>
                 <div className="flex items-center space-x-2">
                   <CartIcon />
-                  <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                     2
                   </span>
                 </div>
@@ -88,7 +88,7 @@ const Header = () => {
                 <span className="text-gray-500">Wishlist</span>
                 <div className="flex items-center space-x-2">
                   <WishList />
-                  <span className="text-base bg-black text-white px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                     2
                   </span>
                 </div>
@@ -96,7 +96,7 @@ const Header = () => {
 
               <button
                 type="submit"
-                className="bg-black w-full flex justify-center text-white rounded-md p-2 mb-5"
+                className="font-inter text-xl font-medium bg-black w-full flex justify-center text-white rounded-md p-2 mb-5"
               >
                 Sign In
               </button>

@@ -15,12 +15,12 @@ const TopCTA = () => {
     >
       <div className="flex md:flex-grow justify-center items-center space-x-3">
         <TicketPercent />
-        <span className="text-sm">30% off storewide — Limited time!</span>
+        <span className="text-sm font-inter font-semibold">30% off storewide — Limited time!</span>
         <Link
           className="hidden space-x-2 md:flex text-sm items-center justify-center border-b border-blue-400 text-blue-400"
           to="#"
         >
-          <span>Shop Now</span> <RightIcon className="text-base" />
+          <span className="text-sm font-medium font-inter">Shop Now</span> <RightIcon className="text-base" />
         </Link>
       </div>
       <div className="md:flex-grow[8]">

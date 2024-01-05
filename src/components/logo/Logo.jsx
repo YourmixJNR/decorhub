@@ -4,7 +4,7 @@ import { TfiShiftRightAlt } from "react-icons/tfi";
 const Logo = () => {
   return (
     <div className='flex items-center'>
-      <TfiShiftRightAlt className='text-base'/>Decorhub
+      <TfiShiftRightAlt className='text-base font-medium font-poppins'/>Decorhub
     </div>
   )
 }

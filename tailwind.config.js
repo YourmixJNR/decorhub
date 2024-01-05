@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        grotesk: ['Space Grotesk', 'sans-serif'],
       },
     },
   },
