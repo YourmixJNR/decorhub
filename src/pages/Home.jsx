@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/layout/Header";
-import ImagePlaceholder1 from "../assets/images/ImagePlaceholder.jpg";
-import ImagePlaceholder2 from "../assets/images/Pasteimage.png";
-import ImagePlaceholder3 from "../assets/images/ImagePlaceholder.jpg";
+import BackgroundImage1 from "../assets/images/backgroundImage1.jpg"
+import BackgroundImage2 from "../assets/images/backgroundImage2.jpg"
+import BackgroundImage3 from "../assets/images/backgroundImage3.jpg"
 import { ReactComponent as LeftArrow } from "../assets/icons/arrow-left.svg"
 import { ReactComponent as RightArrow } from "../assets/icons/arrow-right.svg"
 import './Home.css'
@@ -10,7 +10,7 @@ import './Home.css'
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = [ImagePlaceholder1, ImagePlaceholder2, ImagePlaceholder3];
+  const images = [BackgroundImage1, BackgroundImage2, BackgroundImage3];
 
   const handleNextClick = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
