@@ -3,6 +3,7 @@ import Header from "../components/layout/Header";
 import ImagePlaceholder1 from "../assets/images/ImagePlaceholder.jpg";
 import ImagePlaceholder2 from "../assets/images/Pasteimage.png";
 import ImagePlaceholder3 from "../assets/images/ImagePlaceholder.jpg";
+import './Home.css'
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,13 +29,24 @@ const Home = () => {
           backgroundImage: `url(${images[currentImageIndex]})`,
         }}
       >
-        {/* Navigation buttons */}
-        <button onClick={handlePrevClick} className="absolute left-0 top-1/2">
-          Prev
-        </button>
-        <button onClick={handleNextClick} className="absolute right-0 top-1/2">
-          Next
-        </button>
+        <div className="hidden md:flex">
+          <button onClick={handlePrevClick} className="absolute left-0 top-1/2">
+            Prev
+          </button>
+          <button onClick={handleNextClick} className="absolute right-0 top-1/2">
+            Next
+          </button>
+        </div>
+
+        <div className="absolute flex gap-4 top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`vanilla-indicators ${index === currentImageIndex ? "vanilla-active" : ""}`}
+              onClick={() => setCurrentImageIndex(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
