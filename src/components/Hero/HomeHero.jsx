@@ -32,7 +32,7 @@ const HomeHero = () => {
 
   return (
     <div
-      className="bg-custom-image bg-cover bg-center h-80 mx-8 lg:mx-40 lg:h-[33rem] relative z-0"
+      className="bg-custom-image bg-cover bg-center h-80 mx-8 xl:mx-40 md:h-[33rem] relative z-0"
       style={{
         backgroundImage: `url(${images[currentImageIndex]})`,
       }}

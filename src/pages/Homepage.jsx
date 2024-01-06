@@ -1,23 +1,86 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/layout/Header";
 import HomeHero from "../components/Hero/HomeHero";
+import RoomChair1 from "../assets/images/room-chair1.jpg";
+import RoomChair2 from "../assets/images/room-chair2.jpg";
+import RoomChair3 from "../assets/images/room-chair3.jpg";
+import { ReactComponent as RightArrow } from "../assets/icons/arrow-right-room.svg";
 
 const Homepage = () => {
   return (
     <>
       <Header />
       <HomeHero />
-      <div className="flex flex-wrap space-y-4 mx-8 mt-8 lg:mx-40 md:flex-nowrap md:items-center">
-        <h3 className="font-poppins text-[2.5rem] leading-[2.75rem] font-medium lg:text-7xl lg:leading-[4.75rem]">
+
+      <div className="flex flex-wrap space-y-4 mx-8 mt-8 xl:mx-40 md:space-y-0 md:flex-nowrap items-center">
+        <h3 className="font-poppins text-[2.5rem] leading-[2.75rem] font-medium xl:text-7xl xl:leading-[4.75rem]">
           Simply Unique<span className="text-gray-500">/</span> Simply Better
           <span className="text-gray-500">.</span>
         </h3>
-        <p className="font-inter text-sm font-normal text-gray-500 lg:text-base">
-          <span className="font-inter text-sm font-semibold text-gray-900 lg:text-base lg:font-semibold">
+
+        <p className="font-inter text-sm font-normal text-gray-500 xl:text-base">
+          <span className="font-inter text-sm font-semibold text-gray-900 xl:text-base xl:font-semibold">
             3legant
-          </span>
+          </span>{" "}
           is a gift & decorations store based in HCMC, Vietnam. Est since 2019.
         </p>
+      </div>
+
+      <div className="flex my-10 flex-wrap lg:flex-nowrap gap-6 mx-8 xl:mx-40">
+        <div className="flex w-full">
+          <div
+            className="bg-cover bg-center w-full h-[23rem] md:h-[41rem] flex flex-col items-start justify-start px-8 py-8"
+            style={{
+              backgroundImage: `url("${RoomChair1}")`,
+            }}
+          >
+            <h3 className="font-poppins text-[1.75rem] font-medium">
+              Living Room
+            </h3>
+            <Link
+              to="#"
+              className="flex items-center justify-center space-x-1 border-b border-neutral-900"
+            >
+              <span>Shop Now</span>
+              <RightArrow />
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap md:flex-nowrap gap-6 w-full lg:flex-wrap">
+          <div
+            className="bg-cover bg-center w-full h-[11rem] md:h-[19rem] lg:h-[19.7rem] flex flex-col items-start justify-end space-y-2 px-8 py-8"
+            style={{
+              backgroundImage: `url("${RoomChair2}")`,
+            }}
+          >
+            <h3 className="font-poppins text-[1.75rem] font-medium">Bedroom</h3>
+            <Link
+              to="#"
+              className="flex items-center justify-center space-x-1 border-b border-neutral-900"
+            >
+              <span>Shop Now</span>
+              <RightArrow />
+            </Link>
+          </div>
+
+          <div
+            className="bg-cover bg-center w-full h-[11rem] md:h-[19rem] lg:h-[19.7rem] flex flex-col items-start justify-end space-y-2 px-8 py-8"
+            style={{
+              backgroundImage: `url("${RoomChair3}")`,
+            }}
+          >
+            <h3 className="font-poppins text-[1.75rem] font-medium">Kitchen</h3>
+            <Link
+              to="#"
+              className="flex items-center justify-center space-x-1 border-b border-neutral-900"
+            >
+              <span>Shop Now</span>
+              <RightArrow />
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

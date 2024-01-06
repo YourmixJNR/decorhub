@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
       <TopCTA />
-      <header className="flex items-center justify-between bg-white mx-8 py-4 lg:mx-40 z-100">
+      <header className="flex items-center justify-between bg-white mx-8 py-4 xl:mx-40 z-100">
         {/* Desktop Starts */}
         <div className="flex items-center">
           <div className="md:hidden">
