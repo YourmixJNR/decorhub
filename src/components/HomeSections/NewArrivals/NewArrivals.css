@@ -7,6 +7,15 @@
     opacity: 1;
 }
 
+.wishlist-icon {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.375rem;
+    border-radius: 2rem;
+    background: #FFF;
+    box-shadow: 0px 8px 16px -8px rgba(15, 15, 15, 0.12);
+}
+
 .wishlist-icon,
 .add-to-cart-btn {
     opacity: 0;

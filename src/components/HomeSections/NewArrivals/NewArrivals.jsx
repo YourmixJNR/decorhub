@@ -47,7 +47,7 @@ const NewArrivals = () => {
                       {product.discountPercent}
                     </p>
                   </div>
-                  <AddToWhishList className="wishlist-icon absolute top-10 left-[90%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
+                  <AddToWhishList className="wishlist-icon absolute top-10 left-[88%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer" />
                   <button className="add-to-cart-btn absolute top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-inter text-base font-medium bg-black flex justify-center text-white w-48 rounded-md py-2 px-6">
                     Add to Cart
                   </button>
