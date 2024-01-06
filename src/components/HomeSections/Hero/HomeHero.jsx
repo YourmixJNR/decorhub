@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import BackgroundImage1 from "../../assets/images/backgroundImage1.jpg";
-import BackgroundImage2 from "../../assets/images/backgroundImage2.jpg";
-import BackgroundImage3 from "../../assets/images/backgroundImage3.jpg";
-import { ReactComponent as LeftArrow } from "../../assets/icons/arrow-left.svg";
-import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right.svg";
+import BackgroundImage1 from "../../../assets/images/backgroundImage1.jpg";
+import BackgroundImage2 from "../../../assets/images/backgroundImage2.jpg";
+import BackgroundImage3 from "../../../assets/images/backgroundImage3.jpg";
+import { ReactComponent as LeftArrow } from "../../../assets/icons/arrow-left.svg";
+import { ReactComponent as RightArrow } from "../../../assets/icons/arrow-right.svg";
 import "./HomeHero.css";
 
 const HomeHero = () => {
