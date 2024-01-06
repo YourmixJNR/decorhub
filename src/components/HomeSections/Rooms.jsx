@@ -7,7 +7,7 @@ import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right-roo
 
 const Rooms = () => {
   return (
-    <div className="flex my-10 flex-wrap lg:flex-nowrap gap-6 mx-8 xl:mx-40">
+    <div className="flex my-12 flex-wrap lg:flex-nowrap gap-6 mx-8 xl:mx-40">
       <div className="flex w-full">
         <div
           className="bg-cover bg-center w-full h-[23rem] md:h-[41rem] flex flex-col items-start justify-start px-8 py-8"

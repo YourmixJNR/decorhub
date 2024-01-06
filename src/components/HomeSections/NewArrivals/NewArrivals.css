@@ -1,0 +1,15 @@
+.product-container {
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.product-container:hover .wishlist-icon,
+.product-container:hover .add-to-cart-btn {
+    opacity: 1;
+}
+
+.wishlist-icon,
+.add-to-cart-btn {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
