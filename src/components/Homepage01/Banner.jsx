@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BannerImage from "../../assets/images/BannerImage.jpg";
-import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right.svg";
+import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right-room.svg";
 
 const Banner = () => {
   return (
@@ -28,7 +28,7 @@ const Banner = () => {
           <div className="w-full">
             <Link
               to="#"
-              className="flex items-center space-x-1 border-b w-[7.4rem] border-neutral-900"
+              className="flex items-center space-x-1 border-b w-[6.5rem] border-neutral-900"
             >
               <span>Shop Now</span>
               <RightArrow />

@@ -6,6 +6,7 @@ import Values from "../components/Homepage01/Values";
 import ProductCarousel from "../components/Homepage01/ProductCarousel/ProductCarousel";
 import BannerGrid from "../components/Homepage01/BannerGrid";
 import Banner from "../components/Homepage01/Banner";
+import BlogSection from "../components/Homepage01/BlogSection";
 
 const Homepage = () => {
   return (
@@ -17,6 +18,7 @@ const Homepage = () => {
       <ProductCarousel />
       <Values />
       <Banner />
+      <BlogSection />
     </>
   );
 };
