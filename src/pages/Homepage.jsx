@@ -5,6 +5,7 @@ import Unique from "../components/Homepage01/Unique";
 import Values from "../components/Homepage01/Values";
 import ProductCarousel from "../components/Homepage01/ProductCarousel/ProductCarousel";
 import BannerGrid from "../components/Homepage01/BannerGrid";
+import Banner from "../components/Homepage01/Banner";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,7 @@ const Homepage = () => {
       <BannerGrid />
       <ProductCarousel />
       <Values />
+      <Banner />
     </>
   );
 };
