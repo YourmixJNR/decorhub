@@ -7,9 +7,12 @@ const Banner = () => {
   return (
     <div className=" mt-8 bg-slate-100">
       <div className="flex flex-wrap lg:flex-nowrap xl:gap-16">
-        <img src={BannerImage} alt="" 
-        className="lg:w-[35rem] xl:w-[45rem] md:w-full md:h-[33rem]"/>
-        <div className="flex flex-col gap-6 py-14 mx-8 lg:py-32 xl:mr-40">
+        <img
+          src={BannerImage}
+          alt=""
+          className="lg:w-[35rem] xl:w-[45rem] md:w-full md:h-[33rem]"
+        />
+        <div className="flex flex-col gap-6 py-14 mx-8 lg:py-32 xl:mx-0 xl:pr-9 xl:mr-40">
           <div className="flex flex-col gap-4">
             <h1 className="text-blue-500 font-inter text-base font-bold ">
               SALE UP TO 35% OFF
@@ -25,7 +28,7 @@ const Banner = () => {
           <div className="w-full">
             <Link
               to="#"
-              className="flex items-center space-x-1 border-b w-32 border-neutral-900"
+              className="flex items-center space-x-1 border-b w-[7.4rem] border-neutral-900"
             >
               <span>Shop Now</span>
               <RightArrow />
