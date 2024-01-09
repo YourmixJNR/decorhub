@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as SearchTwo } from "../../assets/icons/search-02.svg";
 
-const SearchBar = () => {
+const NavSearchBar = () => {
   return (
     <div className="flex relative items-center">
       <SearchTwo className="absolute ml-2.5 left-0" />
@@ -14,4 +14,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default NavSearchBar;

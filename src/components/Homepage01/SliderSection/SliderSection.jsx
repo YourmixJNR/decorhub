@@ -4,9 +4,9 @@ import BackgroundImage2 from "../../../assets/images/backgroundImage2.jpg";
 import BackgroundImage3 from "../../../assets/images/backgroundImage3.jpg";
 import { ReactComponent as LeftArrow } from "../../../assets/icons/arrow-left.svg";
 import { ReactComponent as RightArrow } from "../../../assets/icons/arrow-right.svg";
-import "./HomeHero.css";
+import "./SliderSection.css";
 
-const HomeHero = () => {
+const SliderSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [BackgroundImage1, BackgroundImage2, BackgroundImage3];
@@ -67,4 +67,4 @@ const HomeHero = () => {
   );
 };
 
-export default HomeHero;
+export default SliderSection;

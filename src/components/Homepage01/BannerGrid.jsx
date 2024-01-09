@@ -5,7 +5,7 @@ import RoomChair2 from "../../assets/images/room-chair2.jpg";
 import RoomChair3 from "../../assets/images/room-chair3.jpg";
 import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right-room.svg";
 
-const Rooms = () => {
+const BannerGrid = () => {
   return (
     <div className="flex my-12 flex-wrap lg:flex-nowrap gap-6 mx-8 xl:mx-40">
       <div className="flex w-full">
@@ -65,4 +65,4 @@ const Rooms = () => {
   );
 };
 
-export default Rooms;
+export default BannerGrid;

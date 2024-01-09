@@ -4,7 +4,7 @@ import { ReactComponent as RightIcon } from "../../assets/icons/top-arrow-right.
 import { ReactComponent as TicketPercent } from "../../assets/icons/ticket-percent.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 
-const TopCTA = () => {
+const NotificationBar = () => {
   const [close, setClose] = useState(false);
 
   return (
@@ -33,4 +33,4 @@ const TopCTA = () => {
   );
 };
 
-export default TopCTA;
+export default NotificationBar;

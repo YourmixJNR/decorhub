@@ -4,7 +4,7 @@ import { ReactComponent as Money } from "../../assets/icons/money.svg";
 import { ReactComponent as Lock } from "../../assets/icons/lock-01.svg";
 import { ReactComponent as Call } from "../../assets/icons/call.svg";
 
-const Steps = () => {
+const Values = () => {
   return (
     <>
       <div className="flex flex-wrap mt-10 gap-4 mx-8 xl:mx-40">
@@ -41,4 +41,4 @@ const Steps = () => {
   );
 };
 
-export default Steps;
+export default Values;

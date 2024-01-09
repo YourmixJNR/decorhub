@@ -6,9 +6,9 @@ import NewArrival3 from "../../../assets/images/newarrival3.jpg";
 import NewArrival4 from "../../../assets/images/newarrival4.jpg";
 import { ReactComponent as RightArrow } from "../../../assets/icons/arrow-right-room.svg";
 import { ReactComponent as AddToWhishList } from "../../../assets/icons/add-to-wishlist.svg";
-import "./NewArrivals.css";
+import "./ProductCarousel.css";
 
-const NewArrivals = () => {
+const ProductCarousel = () => {
   return (
     <>
       <div className="flex flex-col gap-12">
@@ -84,7 +84,7 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default ProductCarousel;
 
 const newArrivals = [
   {

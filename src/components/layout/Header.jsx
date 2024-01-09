@@ -8,10 +8,10 @@ import { ReactComponent as SearchTwo } from "../../assets/icons/search-02.svg";
 import { ReactComponent as UserCircle } from "../../assets/icons/user-circle.svg";
 import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
 import NavSocialIcons from "../ui/NavSocialIcons";
-import SearchBar from "../ui/SearchBar";
+import SearchBar from "../ui/NavSearchBar";
 import MobileNavBar from "../navbar/MobileNavBar";
 import DesktopNavBar from "../navbar/DesktopNavBar";
-import TopCTA from "../ui/TopCTA";
+import TopCTA from "../ui/NotificationBar";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
