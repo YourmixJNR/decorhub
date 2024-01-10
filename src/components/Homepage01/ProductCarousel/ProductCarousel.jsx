@@ -12,7 +12,7 @@ const ProductCarousel = () => {
   return (
     <>
       <div className="flex flex-col gap-12">
-        <div className="flex items-end justify-between mx-8 xl:mx-40">
+        <div className="flex items-end justify-between px-8 xl:px-40">
           <div>
             <h2 className="font-poppins font-medium text-[2.1rem] leading-8">
               New <br />
@@ -29,7 +29,7 @@ const ProductCarousel = () => {
             </Link>
           </div>
         </div>
-        <div className="ml-8 xl:ml-40">
+        <div className="pl-8 xl:pl-40">
           <div className="flex gap-4 overflow-x-auto">
             {newArrivals.map((product) => (
               <div key={product.id} className="product-container">
@@ -71,7 +71,7 @@ const ProductCarousel = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden my-8 mx-8 xl:mx-40">
+      <div className="md:hidden my-8 px-8 xl:px-40">
         <Link
           to="#"
           className="sm:hidden flex items-center space-x-1 border-b w-36 border-neutral-900"

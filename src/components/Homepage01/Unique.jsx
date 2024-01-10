@@ -2,7 +2,7 @@ import React from "react";
 
 const Unique = () => {
   return (
-    <div className="flex flex-wrap space-y-4 mx-8 mt-8 xl:mx-40 md:space-y-0 md:flex-nowrap items-center">
+    <div className="flex flex-wrap space-y-4 mt-8 md:space-y-0 md:flex-nowrap items-center  px-8 xl:px-40">
       <h3 className="font-poppins text-[2.5rem] leading-[2.75rem] font-medium xl:text-7xl xl:leading-[4.75rem]">
         Simply Unique<span className="text-gray-500">/</span> Simply Better
         <span className="text-gray-500">.</span>

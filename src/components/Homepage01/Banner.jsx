@@ -12,7 +12,7 @@ const Banner = () => {
           alt=""
           className="lg:w-[35rem] xl:w-[45rem] md:w-full md:h-[33rem]"
         />
-        <div className="flex flex-col gap-6 py-14 mx-8 lg:py-32 xl:mx-0 xl:pr-9 xl:mr-40">
+        <div className="flex flex-col gap-6 py-14 px-8 lg:py-32 xl:px-0 xl:pr-9 xl:mr-40">
           <div className="flex flex-col gap-4">
             <h1 className="text-blue-500 font-inter text-base font-bold ">
               SALE UP TO 35% OFF

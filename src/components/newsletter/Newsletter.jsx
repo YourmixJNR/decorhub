@@ -6,7 +6,7 @@ const Newsletter = () => {
   return (
     <div className="mt-20">
       <div className="bg-md-image flex flex-wrap sm:flex-col items-center justify-center bg-slate-100 py-24 gap-10 text-center md:bg-cover md:bg-center">
-        <div className="flex flex-col gap-2 mx-8 xl:mx-40">
+        <div className="flex flex-col gap-2 px-8 xl:px-40">
           <h4 className="font-poppins text-[1.75rem] font-medium ">
             Join Our Newsletter
           </h4>

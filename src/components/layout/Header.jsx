@@ -20,7 +20,7 @@ const Header = () => {
     <>
       <header style={{ zIndex: 50 }} className="fixed w-full">
         <NotificationBar />
-        <div className=" flex items-center justify-between bg-white px-8 py-4 xl:px-40">
+        <div className=" flex items-center justify-between bg-white py-4 px-8 xl:px-40">
           {/* Desktop Starts */}
           <div className="flex items-center">
             <div className="md:hidden">

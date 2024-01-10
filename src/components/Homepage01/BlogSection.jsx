@@ -28,7 +28,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="mt-10 mx-8 xl:mx-40">
+    <div className="mt-10 px-8 xl:px-40">
       <div className="flex items-end justify-between mb-10 ">
         <div>
           <h2 className="font-poppins font-medium text-[2.1rem] leading-8">

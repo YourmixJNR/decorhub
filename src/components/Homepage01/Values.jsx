@@ -7,7 +7,7 @@ import { ReactComponent as Call } from "../../assets/icons/call.svg";
 const Values = () => {
   return (
     <>
-      <div className="flex flex-wrap mt-10 gap-4 mx-8 xl:mx-40">
+      <div className="flex flex-wrap mt-10 gap-4 px-8 xl:px-40">
         <div className="flex flex-col flex-1 flex-grow-0 flex-shrink-0 basis-[45%] sm:flex-grow sm:flex-shrink sm:basis-0 py-8 px-4 items-start gap-4 bg-gray-100">
           <FastDelivery />
           <div className="flex flex-col gap-1">
