@@ -60,7 +60,7 @@ const BlogSection = () => {
                   to={`${post.link}`}
                   className="flex font-inter text-sm items-center space-x-1 border-b w-[6.5rem] border-neutral-900"
                 >
-                  <span>Read Morw</span>
+                  <span>Read More</span>
                   <RightArrow />
                 </Link>
               </div>
