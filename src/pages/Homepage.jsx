@@ -7,6 +7,7 @@ import ProductCarousel from "../components/Homepage01/ProductCarousel/ProductCar
 import BannerGrid from "../components/Homepage01/BannerGrid";
 import Banner from "../components/Homepage01/Banner";
 import BlogSection from "../components/Homepage01/BlogSection";
+import Newsletter from "../components/newsletter/Newsletter";
 
 const Homepage = () => {
   return (
@@ -19,6 +20,7 @@ const Homepage = () => {
       <Values />
       <Banner />
       <BlogSection />
+      <Newsletter />
     </>
   );
 };

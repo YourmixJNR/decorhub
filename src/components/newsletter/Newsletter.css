@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+    .bg-md-image {
+        background-image: url(../../assets/images/NewsletterImage.jpg);
+        background-size: cover;
+        background-position: center;
+
+    }
+}
