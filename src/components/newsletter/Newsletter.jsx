@@ -15,16 +15,18 @@ const Newsletter = () => {
           </p>
         </div>
 
-        <div className="flex pb-2 justify-center items-center text-center border-b border-slate-400">
-          <EmailIcon className="" />
-          <input
-            type="text"
-            placeholder="Email address"
-            className=" bg-slate-100 placeholder-slate-400 font-inter text-base font-medium px-2 focus:outline-none"
-          />
-          <span className="text-slate-400 font-inter text-base font-medium cursor-pointer">
-            Sign Up
-          </span>
+        <div className="px-8 xl:px-40">
+          <div className="flex pb-2 justify-center items-center text-center border-b border-slate-400">
+            <EmailIcon className="" />
+            <input
+              type="text"
+              placeholder="Email address"
+              className="w-[13rem] sm:w-[20rem] bg-slate-100 placeholder-slate-400 font-inter text-base font-medium px-2 focus:outline-none"
+            />
+            <span className="text-slate-400 font-inter text-base font-medium cursor-pointer">
+              Sign Up
+            </span>
+          </div>
         </div>
       </div>
     </div>
