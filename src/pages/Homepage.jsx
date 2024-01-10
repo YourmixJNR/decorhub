@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/layout/Header";
 import SliderSection from "../components/Homepage01/SliderSection/SliderSection";
 import Unique from "../components/Homepage01/Unique";
 import Values from "../components/Homepage01/Values";
@@ -8,12 +7,12 @@ import BannerGrid from "../components/Homepage01/BannerGrid";
 import Banner from "../components/Homepage01/Banner";
 import BlogSection from "../components/Homepage01/BlogSection";
 import Newsletter from "../components/newsletter/Newsletter";
-import Footer from "../components/layout/Footer";
+import Layout from "../components/layout/Layout";
 
 const Homepage = () => {
   return (
     <>
-      <Header />
+      <Layout>
       <SliderSection />
       <Unique />
       <BannerGrid />
@@ -22,7 +21,7 @@ const Homepage = () => {
       <Banner />
       <BlogSection />
       <Newsletter />
-      <Footer />
+      </Layout>
     </>
   );
 };
