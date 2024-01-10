@@ -1,11 +1,33 @@
-import React from 'react'
+import React from "react";
+import Logo from "../logo/Logo";
+import { links } from "../navbar/links";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      
+    <div className="bg-neutral-900 py-12">
+      <div className="flex flex-col gap-10 md:flex-row text-white md:justify-between items-center mx-8 xl:mx-40">
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <Logo />
+          <span className="bg-slate-600 w-[0.0625rem] h-6 transform rotate-90 md:rotate-180"></span>
+          <h5>Gift & Decoration Store</h5>
+        </div>
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          {links.map(({ name, path }, index) => {
+            return (
+              <Link
+                key={index}
+                to={path}
+                className="font-inter text-sm font-normal"
+              >
+                {name}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { links } from "./links";
 
 const MobileNavBar = () => {
-  let links = [
-    { name: "Home", path: "/" },
-    { name: "Product", path: "#" },
-    { name: "Shop", path: "#" },
-    { name: "Contact Us", path: "#" },
-  ];
 
   return (
     <div>

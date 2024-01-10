@@ -8,6 +8,7 @@ import BannerGrid from "../components/Homepage01/BannerGrid";
 import Banner from "../components/Homepage01/Banner";
 import BlogSection from "../components/Homepage01/BlogSection";
 import Newsletter from "../components/newsletter/Newsletter";
+import Footer from "../components/layout/Footer";
 
 const Homepage = () => {
   return (
@@ -21,6 +22,7 @@ const Homepage = () => {
       <Banner />
       <BlogSection />
       <Newsletter />
+      <Footer />
     </>
   );
 };

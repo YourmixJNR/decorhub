@@ -48,7 +48,7 @@ const BlogSection = () => {
       <div className="flex flex-wrap sm:flex-nowrap gap-6">
         {blogPosts.map((post) => {
           return (
-            <div key={post.id} className=" w-full">
+            <div key={post.id} className=" w-full space-y-2">
               <div className="flex flex-wrap gap-4">
                 <img src={post.image} className="w-full object-cover" alt="" />
                 <h3 className="font-inter text-base font-semibold">
