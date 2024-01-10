@@ -4,7 +4,7 @@ import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/instagram.svg";
 import { ReactComponent as Youtube } from "../../assets/icons/youtube.svg";
 
-const NavSocialIcons = () => {
+const HeaderSocialIcons = () => {
   return (
     <>
       <Link to="#">
@@ -20,4 +20,4 @@ const NavSocialIcons = () => {
   );
 };
 
-export default NavSocialIcons;
+export default HeaderSocialIcons;

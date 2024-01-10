@@ -7,7 +7,7 @@ import { ReactComponent as CartIcon } from "../../assets/icons/shopping-bag.svg"
 import { ReactComponent as SearchTwo } from "../../assets/icons/search-02.svg";
 import { ReactComponent as UserCircle } from "../../assets/icons/user-circle.svg";
 import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
-import NavSocialIcons from "../ui/NavSocialIcons";
+import HeaderSocialIcons from "../ui/HeaderSocialIcons";
 import SearchBar from "../ui/NavSearchBar";
 import MobileNavBar from "../navbar/MobileNavBar";
 import DesktopNavBar from "../navbar/DesktopNavBar";
@@ -102,7 +102,7 @@ const Header = () => {
               </button>
 
               <div className="flex space-x-6">
-                <NavSocialIcons />
+                <HeaderSocialIcons />
               </div>
             </div>
           </div>
