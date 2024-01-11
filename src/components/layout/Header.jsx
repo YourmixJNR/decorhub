@@ -12,6 +12,7 @@ import SearchBar from "../ui/NavSearchBar";
 import MobileNavBar from "../navbar/MobileNavBar";
 import DesktopNavBar from "../navbar/DesktopNavBar";
 import NotificationBar from "../ui/NotificationBar";
+import FlyoutCart from "./FlyoutCart/FlyoutCart";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -43,14 +44,13 @@ const Header = () => {
             <Link to="#">
               <UserCircle className="hidden md:block" />
             </Link>
-            <Link to="#">
-              <div className="flex items-center space-x-1">
-                <CartIcon />
-                <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
-                  2
-                </span>
-              </div>
-            </Link>
+            <div className="flex items-center space-x-1 cursor-pointer">
+              <CartIcon />
+              <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
+                2
+              </span>
+            </div>
+            <FlyoutCart />
           </div>
           {/* Desktop Ends */}
 
