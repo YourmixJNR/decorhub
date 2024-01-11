@@ -36,14 +36,14 @@ const FlyoutCart = ({setOpenFlyout, openFlyout }) => {
                     Color: {flyout.color}
                   </p>
                   <div className="w-20 flex py-1 px-1 justify-center items-center border rounded border-slate-500 ">
-                    <Add />
+                    <Add className="cursor-pointer"/>
                     <input
                       value={flyout.quantity}
                       type="number"
                       inputMode="numeric"
-                      className="w-5 text-center mx-2"
+                      className="w-5 text-center mx-2 focus:outline-none"
                     />
-                    <Minus />
+                    <Minus className="cursor-pointer"/>
                   </div>
                 </div>
               </div>
