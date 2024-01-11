@@ -5,10 +5,12 @@ import Newsletter from "../components/newsletter/Newsletter";
 
 const ProductPage = () => {
   return (
-    <Layout>
-      <ProductBreadcrumb />
-      <Newsletter />
-    </Layout>
+    <>
+      <Layout>
+        <ProductBreadcrumb />
+        <Newsletter />
+      </Layout>
+    </>
   );
 };
 

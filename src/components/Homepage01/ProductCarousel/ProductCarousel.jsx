@@ -54,7 +54,7 @@ const ProductCarousel = () => {
                     </button>
                   </div>
                 </div>
-                <Link to="/" className="flex flex-col">
+                <Link to="/productpage" className="flex flex-col">
                   <p>{product.star}</p>
                   <h3 className="font-inter text-base font-semibold">
                     {product.name}
