@@ -6,7 +6,7 @@ import FooterSocialIcons from "../ui/FooterSocialIcons";
 
 const Footer = () => {
   return (
-    <div className="bg-neutral-900 py-12 md:py-0 md:pt-20 md:pb-8">
+    <footer className="bg-neutral-900 py-12 md:py-0 md:pt-20 md:pb-8">
       <div className="flex flex-col gap-10 md:flex-row text-white md:justify-between items-center px-8 xl:px-40">
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <Logo />
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

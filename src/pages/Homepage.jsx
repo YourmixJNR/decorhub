@@ -11,8 +11,7 @@ import Layout from "../components/layout/Layout";
 
 const Homepage = () => {
   return (
-    <>
-      <Layout>
+    <Layout>
       <SliderSection />
       <Unique />
       <BannerGrid />
@@ -21,8 +20,7 @@ const Homepage = () => {
       <Banner />
       <BlogSection />
       <Newsletter />
-      </Layout>
-    </>
+    </Layout>
   );
 };
 
