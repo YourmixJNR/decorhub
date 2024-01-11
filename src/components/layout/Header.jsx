@@ -15,7 +15,8 @@ import NotificationBar from "../ui/NotificationBar";
 import FlyoutCart from "./FlyoutCart/FlyoutCart";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openFlyout, setOpenFlyout] = useState(false);
 
   return (
     <>
@@ -27,7 +28,7 @@ const Header = () => {
             <div className="md:hidden">
               <MenuIcon
                 className="cursor-pointer"
-                onClick={() => setOpen(!open)}
+                onClick={() => setOpenMenu(!openMenu)}
               />
             </div>
             <Logo />
@@ -44,20 +45,33 @@ const Header = () => {
             <Link to="#">
               <UserCircle className="hidden md:block" />
             </Link>
-            <div className="flex items-center space-x-1 cursor-pointer">
+            <div
+              className="flex items-center space-x-1 cursor-pointer"
+              onClick={() => setOpenFlyout(!openFlyout)}
+            >
               <CartIcon />
               <span className="text-xs font-inter font-bold bg-black text-white w-5 h-5 justify-center items-center flex rounded-full">
                 2
               </span>
             </div>
-            <FlyoutCart />
+            {/* Flyout Functions */}
+            <div
+              className={`fixed w-full h-full top-0 right-0 bg-gray-500 bg-opacity-50 transform origin-right transition-transform duration-300 ease-in-out ${
+                openFlyout ? "translate-x-0" : "translate-x-full"
+              }`}
+              style={{ zIndex: 50 }}
+            >
+              <div className="overflow-y-scroll flex flex-col fixed top-0 right-0 gap-6 w-11/12 sm:w-[25.8rem] h-full bg-white py-6 px-6">
+                <FlyoutCart setOpenFlyout={setOpenFlyout} openFlyout={openFlyout} />
+              </div>
+            </div>
           </div>
           {/* Desktop Ends */}
 
           {/* Mobile Starts */}
           <div
             className={`w-full h-full top-0 left-0 bg-gray-400 fixed transform origin-left transition-transform duration-300 ease-in-out ${
-              open ? "translate-x-0" : "-translate-x-full"
+              openMenu ? "translate-x-0" : "-translate-x-full"
             } md:hidden`}
             style={{ zIndex: 100 }}
           >
@@ -67,7 +81,7 @@ const Header = () => {
                   <Logo />
                   <CloseMenu
                     className="cursor-pointer"
-                    onClick={() => setOpen(!open)}
+                    onClick={() => setOpenMenu(!openMenu)}
                   />
                 </div>
                 <SearchBar />
