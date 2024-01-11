@@ -40,7 +40,7 @@ const Footer = () => {
               Terms of Use
             </p>
             <p className="font-poppins text-xs font-normal text-white">
-              Copyright © 2023 HomeDecor. All rights reserved
+              Copyright © 2023 Decorhub. All rights reserved
             </p>
           </div>
         </div>
