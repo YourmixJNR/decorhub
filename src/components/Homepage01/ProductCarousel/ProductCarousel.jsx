@@ -54,7 +54,7 @@ const ProductCarousel = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex flex-col">
+                <Link to="/" className="flex flex-col">
                   <p>{product.star}</p>
                   <h3 className="font-inter text-base font-semibold">
                     {product.name}
@@ -65,7 +65,7 @@ const ProductCarousel = () => {
                       ${product.discount}
                     </span>
                   </p>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
