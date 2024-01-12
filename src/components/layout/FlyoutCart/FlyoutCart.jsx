@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as CloseMenu } from "../../../assets/icons/Line.svg";
 import FlyoutImage1 from "../../../assets/images/flyoutImage1.jpg";
@@ -9,6 +10,14 @@ import { ReactComponent as Minus } from "../../../assets/icons/Minus.svg";
 import "./FlyoutCart.css";
 
 const FlyoutCart = ({setOpenFlyout, openFlyout }) => {
+
+  const [flyout, setFlyout] = useState({ quantity: 0 });
+
+  const handleQuantityChange = (e) => {
+    const newQuantity = parseInt(e.target.value, 10);
+    setFlyout({ ...flyout, quantity: newQuantity });
+  };
+
   return (
     <>
       <div>
@@ -41,6 +50,7 @@ const FlyoutCart = ({setOpenFlyout, openFlyout }) => {
                       value={flyout.quantity}
                       type="number"
                       inputMode="numeric"
+                      onChange={handleQuantityChange}
                       className="w-5 text-center mx-2 focus:outline-none"
                     />
                     <Minus className="cursor-pointer"/>
