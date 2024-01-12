@@ -26,7 +26,7 @@ const FlyoutCart = ({setOpenFlyout, openFlyout }) => {
               key={flyout.id}
             >
               <div className="flex gap-4">
-                <img src={`${flyout.image}`} alt="" />
+                <img src={`${flyout.image}`} className="w-[80px] h-[96px]" alt="" />
                 <div className="flex flex-col gap-2">
                   <h4 className="font-inter text-sm font-semibold">
                     {flyout.name}
