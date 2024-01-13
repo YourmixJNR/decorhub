@@ -140,7 +140,7 @@ const ProductLoop = () => {
                       </div>
                       <button
                         type="submit"
-                        className="text-black font-inter text-sm font-medium border border-black w-full flex gap-2 justify-center rounded-md p-2"
+                        className="text-black font-inter text-sm font-medium border border-black w-full flex gap-2 justify-center items-center rounded-md p-2"
                       >
                         <WishList className="w-4" /> Wishlist
                       </button>

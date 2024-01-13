@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             {/* Flyout Functions */}
             <div
-              className={`fixed w-full h-full top-0 right-0 bg-gray-500 bg-opacity-50 transform origin-right transition-transform duration-300 ease-in-out ${
+              className={`fixed w-full h-full top-0 right-0 bg-gray-500 bg-opacity-50 transform origin-right transition-transform duration-500 ease-in-out ${
                 openFlyout ? "translate-x-0" : "translate-x-full"
               }`}
               style={{ zIndex: 50 }}
@@ -70,7 +70,7 @@ const Header = () => {
 
           {/* Mobile Starts */}
           <div
-            className={`w-full h-full top-0 left-0 bg-gray-400 fixed transform origin-left transition-transform duration-300 ease-in-out ${
+            className={`w-full h-full top-0 left-0 bg-gray-400 fixed transform origin-left transition-transform duration-500 ease-in-out ${
               openMenu ? "translate-x-0" : "-translate-x-full"
             } md:hidden`}
             style={{ zIndex: 100 }}
