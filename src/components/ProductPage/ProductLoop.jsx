@@ -32,35 +32,35 @@ const ProductLoop = () => {
             <div key={product.id} className="w-full">
               <div className="flex flex-wrap lg:flex-nowrap lg:gap-[3.94rem]">
                 <div className="w-full">
-                    <div
-                      className="flex bg-cover bg-center relative w-full h-[25rem] sm:h-[45rem] lg:w-[34.25rem]"
-                      style={{
-                        backgroundImage: `url("${product.image}")`,
-                      }}
-                    >
-                      <div className="flex gap-2 flex-col absolute top-12 left-14 transform -translate-x-1/2 -translate-y-1/2">
-                        <p className="py-1 px-[0.87rem] font-inter text-base font-bold bg-white text-black uppercase rounded-[0.25rem]">
-                          {product.category}
-                        </p>
-                        <p className="py-1 px-[0.87rem] font-inter text-base font-bold bg-green-500 text-white uppercase rounded-[0.25rem]">
-                          {product.discountPercent}
-                        </p>
-                      </div>
-                      <div className="absolute w-full top-1/2 flex justify-between px-6">
-                        <span
-                          //   onClick={handlePrevClick}
-                          className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
-                        >
-                          <LeftArrow />
-                        </span>
-                        <span
-                          //   onClick={handleNextClick}
-                          className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
-                        >
-                          <RightArrow />
-                        </span>
-                      </div>
+                  <div
+                    className="flex bg-cover bg-center relative w-full h-[25rem] sm:h-[45rem] lg:w-[34.25rem]"
+                    style={{
+                      backgroundImage: `url("${product.image}")`,
+                    }}
+                  >
+                    <div className="flex gap-2 flex-col absolute top-12 left-14 transform -translate-x-1/2 -translate-y-1/2">
+                      <p className="py-1 px-[0.87rem] font-inter text-base font-bold bg-white text-black uppercase rounded-[0.25rem]">
+                        {product.status}
+                      </p>
+                      <p className="py-1 px-[0.87rem] font-inter text-base font-bold bg-green-500 text-white uppercase rounded-[0.25rem]">
+                        {product.discountPercent}
+                      </p>
                     </div>
+                    <div className="absolute w-full top-1/2 flex justify-between px-6">
+                      <span
+                        //   onClick={handlePrevClick}
+                        className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
+                      >
+                        <LeftArrow />
+                      </span>
+                      <span
+                        //   onClick={handleNextClick}
+                        className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
+                      >
+                        <RightArrow />
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 <div>
@@ -152,6 +152,16 @@ const ProductLoop = () => {
                       Add to Cart
                     </button>
                   </div>
+
+                  <div className="space-y-2 font-inter text-xs font-normal text-neutral-500">
+                    <div className="flex gap-[6.12rem]">
+                      <p>SKU</p> <span className="text-black">{product.stockKeepingUnit}</span>
+                    </div>
+                    <div className="flex gap-[3.62rem]">
+                      <p>CATEGORY</p> <span className="text-black">{product.category}</span>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -176,7 +186,9 @@ const productDetails = [
     discountPercent: "-50%",
     star: "★ ★ ★ ★ ★",
     reviews: 11,
-    category: "New",
+    status: "New",
+    category: "Living Room, Bedroom",
+    stockKeepingUnit: 1117,
     measurement: "17 1/2x20 5/8",
     colors: [
       { name: "Black", image: productLoopImg1 },
