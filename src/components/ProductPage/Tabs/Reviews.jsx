@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as SendArrow } from "../../../assets/icons/white-right-arrow.svg";
 import UserReviewAvatar from "../../../assets/images/userReviewAvatar.jpg";
+import UserReviewAvatar1 from "../../../assets/images/userReviewAvatar1.jpg";
 
 const Reviews = () => {
   const [value, setValue] = useState("");
@@ -75,21 +76,25 @@ const Reviews = () => {
       </div>
       <div>
         {customerReview.map((review, index) => (
-          <div key={index} className="space-y-4">
-            <div className="flex gap-4">
-              <img src={review.eachUser[0].avatar} alt="" />
-              <div>
-                <h4 className="font-inter text-xl font-semibold">
-                  {review.eachUser[1].name}
-                </h4>
-                <p>{review.eachUser[2].star}</p>
+          <div key={index} className="flex flex-col gap-6">
+            {review.eachUser.map((user, userIndex) => (
+              <div key={userIndex} className="flex flex-col gap-4 pb-4">
+                <div className="flex gap-4">
+                  <img src={user[0].avatar} alt="" />
+                  <div className="space-y-4">
+                    <h4 className="font-inter text-xl font-semibold">
+                      {user[1].name}
+                    </h4>
+                    <p>{user[2].star}</p>
+                  </div>
+                </div>
+                <div>
+                  <p className="sm:ml-[5.5rem] font-inter text-base text-neutral-600 font-normal">
+                    {user[3].details}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="font-inter text-base text-neutral-600 font-normal">
-                {review.eachUser[3].details}
-              </p>
-            </div>
+            ))}
           </div>
         ))}
       </div>
@@ -108,13 +113,24 @@ const customerReview = [
     star: "★ ★ ★ ★ ★",
     reviews: 11,
     eachUser: [
-      { avatar: UserReviewAvatar },
-      { name: "Sofia Harvetz" },
-      { star: "★ ★ ★ ★ ★" },
-      {
-        details:
-          "I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi sint non provident.",
-      },
+      [
+        { avatar: UserReviewAvatar },
+        { name: "Sofia Harvetz" },
+        { star: "★ ★ ★ ★ ★" },
+        {
+          details:
+            "I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi sint non provident.",
+        },
+      ],
+      [
+        { avatar: UserReviewAvatar1 },
+        { name: "Michael Victor" },
+        { star: "★ ★ ★ ★" },
+        {
+          details:
+            "I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi sint non provident.",
+        },
+      ],
     ],
   },
 ];
