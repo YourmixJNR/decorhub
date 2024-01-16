@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { ReactComponent as LeftArrow } from "../../assets/icons/arrow-left.svg";
 import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right.svg";
 import productLoopImg1 from "../../assets/images/productLoopImg1.jpg";
+import productImage1 from "../../assets/images/productImage1.jpg";
+import productImage2 from "../../assets/images/productImage2.jpg";
+import productImage3 from "../../assets/images/productImage3.jpg";
 import ImageColorSilver from "../../assets/images/imageColorSilver.jpg";
 import ImageColorRed from "../../assets/images/imageColorRed.jpg";
 import ImageColorFaded from "../../assets/images/imageColorFaded.jpg";
@@ -11,6 +14,18 @@ import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
 
 const ProductLoop = () => {
   const [currentColorIndex, setColorCurrentIndex] = useState(0);
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextClick = (productImages) => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
+  };
+
+  const handlePrevClick = (productImages) => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + productImages.length) % productImages.length
+    );
+  };
 
   const handleClick = (index) => {
     // Set the currentColorIndex to the clicked index
@@ -35,7 +50,7 @@ const ProductLoop = () => {
                   <div
                     className="flex bg-cover bg-center relative w-full h-[25rem] sm:h-[45rem] lg:w-[34.25rem]"
                     style={{
-                      backgroundImage: `url("${product.image}")`,
+                      backgroundImage: `url("${product.productImages[currentImageIndex]}")`,
                     }}
                   >
                     <div className="flex gap-2 flex-col absolute top-12 left-14 transform -translate-x-1/2 -translate-y-1/2">
@@ -48,13 +63,13 @@ const ProductLoop = () => {
                     </div>
                     <div className="absolute w-full top-1/2 flex justify-between px-6">
                       <span
-                        //   onClick={handlePrevClick}
+                          onClick={() => handleNextClick(product.productImages)}
                         className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
                       >
                         <LeftArrow />
                       </span>
                       <span
-                        //   onClick={handleNextClick}
+                         onClick={() => handlePrevClick(product.productImages)}
                         className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
                       >
                         <RightArrow />
@@ -179,6 +194,7 @@ const productDetails = [
     id: 1,
     name: "Tray Table",
     image: productLoopImg1,
+    productImages: [productLoopImg1, productImage1, productImage2, productImage3],
     description:
       "Buy one or buy a few and make every space where you sit more convenient. Light and easy to move around with removable tray top, handy for serving snacks.",
     price: 100.12,
