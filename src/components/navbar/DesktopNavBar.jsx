@@ -15,7 +15,6 @@ const DesktopNavBar = () => {
         <NavLink
           key={index}
           to={path}
-          exact
           className="text-sm font-grotesk font-medium text-gray-500 active:text-black link:text-black"
         >
           {name}

@@ -125,7 +125,7 @@ const ProductLoop = () => {
                     </div>
                   </div>
 
-                  <div className="flex py-6 gap-4 sm:gap-6 flex-col">
+                  <div className="flex py-6 gap-4 sm:gap-6 flex-col border-b border-neutral-200">
                     <div className="flex gap-2 justify-between items-center">
                       <div className="w-[5rem] h-[2.6rem] sm:w-[7rem] flex py-3 px-2 justify-center items-center bg-neutral-100 border rounded border-slate-500 ">
                         <Add className="cursor-pointer" />
@@ -147,13 +147,13 @@ const ProductLoop = () => {
                     </div>
                     <button
                       type="submit"
-                      className="font-inter text-lg font-medium bg-black w-full flex justify-center text-white rounded-md p-2 mb-4"
+                      className="font-inter text-lg font-medium bg-black w-full flex justify-center text-white rounded-md p-2"
                     >
                       Add to Cart
                     </button>
                   </div>
 
-                  <div className="space-y-2 font-inter text-xs font-normal text-neutral-500">
+                  <div className="space-y-2 py-6 font-inter text-xs font-normal text-neutral-500">
                     <div className="flex gap-[6.12rem]">
                       <p>SKU</p> <span className="text-black">{product.stockKeepingUnit}</span>
                     </div>
