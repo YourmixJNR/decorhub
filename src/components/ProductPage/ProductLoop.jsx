@@ -4,7 +4,6 @@ import { ReactComponent as RightArrow } from "../../assets/icons/arrow-right.svg
 import productLoopImg1 from "../../assets/images/productLoopImg1.jpg";
 import productImage1 from "../../assets/images/productImage1.jpg";
 import productImage2 from "../../assets/images/productImage2.jpg";
-import productImage3 from "../../assets/images/productImage3.jpg";
 import ImageColorSilver from "../../assets/images/imageColorSilver.jpg";
 import ImageColorRed from "../../assets/images/imageColorRed.jpg";
 import ImageColorFaded from "../../assets/images/imageColorFaded.jpg";
@@ -14,16 +13,21 @@ import { ReactComponent as WishList } from "../../assets/icons/Wishlist.svg";
 
 const ProductLoop = () => {
   const [currentColorIndex, setColorCurrentIndex] = useState(0);
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleNextClick = (productImages) => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % productImages.length);
   };
 
+  const handleImageClick = (index) => {
+    setCurrentImageIndex(index);
+  };
+
   const handlePrevClick = (productImages) => {
     setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + productImages.length) % productImages.length
+      (prevIndex) =>
+        (prevIndex - 1 + productImages.length) % productImages.length
     );
   };
 
@@ -63,23 +67,38 @@ const ProductLoop = () => {
                     </div>
                     <div className="absolute w-full top-1/2 flex justify-between px-6">
                       <span
-                          onClick={() => handleNextClick(product.productImages)}
+                        onClick={() => handleNextClick(product.productImages)}
                         className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
                       >
                         <LeftArrow />
                       </span>
                       <span
-                         onClick={() => handlePrevClick(product.productImages)}
+                        onClick={() => handlePrevClick(product.productImages)}
                         className="bg-white w-12 h-12 p-3 cursor-pointer flex justify-center items-center rounded-full"
                       >
                         <RightArrow />
                       </span>
                     </div>
                   </div>
+                  <div className="hidden mt-4 space-x-6 lg:flex">
+                    {product.productImages.map((image, index) => (
+                      <img
+                        onClick={() => handleImageClick(index)}
+                        className={`w-[5.5rem] h-[5.5rem] ${
+                          currentImageIndex === index
+                            ? "border border-neutral-700"
+                            : ""
+                        }`}
+                        key={index}
+                        src={image}
+                        alt={`Product Image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
 
                 <div>
-                  <div className="flex flex-col pb-6 border-b border-neutral-200 gap-4">
+                  <div className="flex flex-col pt-4 lg:pt-0 pb-6 border-b border-neutral-200 gap-4">
                     <div className="space-x-4">
                       <span className="text-base text-neutral-900 font-inter font-normal">
                         {product.star}
@@ -170,13 +189,16 @@ const ProductLoop = () => {
 
                   <div className="space-y-2 py-6 font-inter text-xs font-normal text-neutral-500">
                     <div className="flex gap-[6.12rem]">
-                      <p>SKU</p> <span className="text-black">{product.stockKeepingUnit}</span>
+                      <p>SKU</p>{" "}
+                      <span className="text-black">
+                        {product.stockKeepingUnit}
+                      </span>
                     </div>
                     <div className="flex gap-[3.62rem]">
-                      <p>CATEGORY</p> <span className="text-black">{product.category}</span>
+                      <p>CATEGORY</p>{" "}
+                      <span className="text-black">{product.category}</span>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -194,7 +216,7 @@ const productDetails = [
     id: 1,
     name: "Tray Table",
     image: productLoopImg1,
-    productImages: [productLoopImg1, productImage1, productImage2, productImage3],
+    productImages: [productLoopImg1, productImage1, productImage2],
     description:
       "Buy one or buy a few and make every space where you sit more convenient. Light and easy to move around with removable tray top, handy for serving snacks.",
     price: 100.12,
