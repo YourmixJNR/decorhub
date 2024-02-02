@@ -91,7 +91,7 @@ const ProductLoop = () => {
                         }`}
                         key={index}
                         src={image}
-                        alt={`Product Image ${index + 1}`}
+                        alt= ""
                       />
                     ))}
                   </div>

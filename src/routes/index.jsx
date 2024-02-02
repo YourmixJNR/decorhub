@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Homepage from "../pages/Homepage";
 import ProductPage from "../pages/ProductPage";
 import ScrollToTop from "./ScrollToTop";
